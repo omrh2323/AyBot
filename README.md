@@ -68,5 +68,11 @@ This project is open-source under the MIT license.
 
 ## 🤝 Contributing
 
-This is a hobby project.  
-If you want to contribute or give feedback, feel free to open issues or pull requests.
+AyBot is still evolving. You can help improve it!
+
+- 🐛 Found a bug? Open an issue!
+- 🌍 Have a new feature idea? Suggest it!
+- 🧠 Want to improve performance or architecture? PRs are welcome!
+- 📝 Even improving docs is appreciated.
+
+Before contributing, check the `issues` tab for open tasks or discussions.
