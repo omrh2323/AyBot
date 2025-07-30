@@ -89,7 +89,11 @@ async def main_async():
         
         if count == 0:
             start_urls = [
-                "https://www.shiftdelete.net/"
+                "https://www.wikipedia.org/",
+                "https://simple.wikipedia.org/",
+                "https://www.bbc.com/",
+                "https://www.archive.org",
+                "https://www.arxiv.org/"
             ]
             for url in start_urls:
                 domain = urlparse(url).netloc

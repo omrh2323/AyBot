@@ -13,10 +13,11 @@ if not os.path.exists('data'):
 
 # Ayarlar
 MYSQL_CONFIG = {
-    'host': 'localhost',
-    'user': 'root',
-    'password': '',
-    'database': 'aysearch'
+    'host': os.getenv('MYSQL_HOST', ''),
+    'port': os.getenv('MYSQL_PORT', '3306'),
+    'user': os.getenv('MYSQL_USER', ''),
+    'password': os.getenv('MYSQL_PASSWORD', ''),
+    'database': os.getenv('MYSQL_DATABASE', '')
 }
 
 SQLITE_DB_PATH = 'data/ayfilter_data.db'
@@ -40,6 +41,6 @@ MIN_CONTENT_LENGTH = 50
 MAX_ERROR_COUNT = 3
 
 # Özel domain ayarları
-PRIORITY_DOMAINS = ['haberler.com', 'cnnturk.com', 'nytimes.com']
+PRIORITY_DOMAINS = ['haberler.com']
 PRIORITY_INTERVAL = 48 * 3600
 WHITELISTED_DOMAINS = ['gov.tr', 'edu.tr', 'tbb.org.tr', 'gov', 'edu']

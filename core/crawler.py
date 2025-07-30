@@ -73,7 +73,7 @@ async def parse_sitemap(session, domain):
             sitemap_url = f"https://{sitemap_url}"
         
         try:
-            async with session.get(sitemap_url, timeout=10, ssl=False) as response:
+            async with session.get(sitemap_url, timeout=10) as response:
                 if response.status == 200:
                     content = await response.text()
                     if "<urlset" in content or "<sitemapindex" in content:
@@ -125,7 +125,6 @@ async def crawl_page(session, url):
                 url, 
                 headers=headers, 
                 timeout=timeout,
-                ssl=False
             ) as response:
                 if response.status == 403 and "bot" in (await response.text()).lower():
                     logger.warning(f"Bot tuzaklı sayfa: {url}")
